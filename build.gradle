@@ -1,0 +1,30 @@
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    ext {
+        android_compile_version = 26
+        android_target_version = 26
+        android_min_version = 18
+
+        appcompat_library_version = '27.0.2'
+        support_library_version = '27.0.2'
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
